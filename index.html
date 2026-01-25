@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/12598/12598320.png" type="image/x-icon">
+
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/script.js" type="module" defer></script>
+</head>
+<body> 
+    <section class="container"> 
+
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    
+
+    <section class="container-form">
+        <div class="box-01">
+            <i class="fa-brands fa-cash-app"></i>
+            <p>Entradas</p>
+            <span id="total-entrada">+R$:</span>
+        </div>
+        <div class="box-02">
+            <i class="fa-solid fa-arrow-down"></i>
+            <p>Saídas</p>
+            <span id="total-saida">-R$:</span>
+        </div>
+        <div class="box-03">
+            <i class="fa-solid fa-wallet"></i>
+            <p>Saldo Atual</p>
+            <span id="saldo">R$:</span>
+        </div>
+    </section>
+
+    <form method="post" > 
+        <h1>Adcionar Transação</h1>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" placeholder="Ex:Salário, Compra, etc...">
+            <br/>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" placeholder="Ex:200"> 
+            <br/>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo">
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <br/>
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value=""  disabled  selected>Selecionar Categoria</option>
+            <option value="sálario">Salário</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="aluguel"> Aluguel</option>
+            <option value="lazer">Lazer</option>
+        </select>
+        <br/>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" />
+        <br/>
+        <button id="btn-submit" type="submit">Adicionar Transação</button>
+    </form>
+
+    <section class="container-tabela">
+  <h2>Transações</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Tipo</th>
+        <th>Categoria</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody id="transactions-body">
+      
+       
+   
+
+    </tbody>
+  </table>
+    </section>
+
+    </section>
+    
+</body>
+</html>

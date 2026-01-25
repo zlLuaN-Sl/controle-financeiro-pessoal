@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0f0d7;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#4b4a4a
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    margin-top:30px;
+}
+
+.box-01,
+.box-02,
+.box-03 {
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.box-01 i,
+.box-02 i,
+.box-03 i {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.box-01 p,
+.box-02 p, 
+.box-03 p {
+    color: #fff;
+    margin-top: 5px;
+    padding: 0 1.5rem;
+}
+
+.box-01 span,
+.box-02 span,
+.box-03 span {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 0.50rem 1rem;
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box-01 {background: #157e15d6;}
+.box-02 {background: #f42b2b;}
+.box-03 {background: #666565;}
+.box-01 span {background: green;}
+.box-02 span {background: red;}
+.box-03 span {background: grey;}
+
+
+form,
+.container-tabela {
+    background: white;
+    border-radius:8px ;
+}
+form h1 {
+    border-bottom: 1px solid #d8c3c3;
+    padding: 0;
+    font-size: 20px;
+    padding: 7px 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+label,
+.container-tabela  {
+   padding: 7px 10px;
+   font-size: 17px; 
+}
+
+input, select {padding: 8px;} 
+#descricao{
+    margin-left: 20px;
+    width: 80%;
+}
+
+#valor{margin-left: 57px; }
+#data {margin-left: 58px;}
+#tipo {margin-left: 63px;} 
+#categoria {margin-left: 21px;}
+#descricao,#valor,#data,#tipo,#categoria{margin-bottom: 10px; border-radius: 4px;}
+#valor,#data,#tipo,#categoria{
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+#btn-submit {
+    padding: 7px 10px;
+    margin: 10px 0 16px 10px;
+    border-radius: 4px;
+    background: rgb(101, 101, 240);
+    color: white;
+    cursor: pointer;
+}
+
+
+.container-tabela {
+    margin-top: 20px;
+
+}
+
+
+.container-tabela h2 {
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #d8c3c3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    background: #f3f3f3;
+    font-weight: 600;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody td {
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+tbody button {
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .container-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .box-01,
+  .box-02,
+  .box-03 {
+    width: 100%;
+  }
+
+  
+  form label {
+    display: block;
+    margin-left: 0;
+  }
+
+  #descricao,
+  #valor,
+  #tipo,
+  #categoria,
+  #data {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #btn-submit {
+    width: calc(100% - 20px);
+  }
+
+  .container-tabela {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  thead th,
+  tbody td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  tbody button {
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+
+
+
